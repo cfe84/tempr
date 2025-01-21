@@ -1,0 +1,1 @@
+Tempr is a temporary email management solution.

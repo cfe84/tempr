@@ -51,5 +51,6 @@ declare module 'emailjs-imap-client' {
     listMessages: (path: string, sequence: string, query: string[], options?: CommandOption) => Promise<Message[]>
     listMailboxes: () => Promise<ListMailboxResponse>;
     createMailbox: (path: string) => Promise<void>;
+    subscribeMailbox: (path: string) => Promise<void>;
   }
 }

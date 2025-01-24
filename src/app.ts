@@ -81,6 +81,7 @@ export class App {
   private async createFolderAsync(client: ImapClient, folder: string): Promise<void> {
     const fullfolder = `INBOX.Received.${folder}`;
     await client.createMailbox(fullfolder);
+    await client.subscribeMailbox(fullfolder);
   }
 
   private async moveMailAsync(client: ImapClient, uid: string, toFolder: string) {
